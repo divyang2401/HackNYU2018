@@ -29,7 +29,7 @@ You need Vokaturi to get this to work.
 $ git clone https://github.com/myy233/HackNYU2018.git
 $ sudo pip install scipy
 $ cd api
-$ python tone-analyzer.py hello.wav
+$ python tone-analyzer.py hello.wav mac
 ```
 
 ## How Do I Use A Different Audio File?
