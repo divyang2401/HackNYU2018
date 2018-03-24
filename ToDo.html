@@ -14,7 +14,7 @@
 <div id="myDIV" class="header">
   <h2 style="margin:5px">New Phrase</h2>
   <input type="text" id="myInput" placeholder="Type phrase here...">
-  <span onclick="newElement()" class="addBtn">Add</span>
+  <span onclick="newPhrase()" class="addBtn">Add</span>
 </div>
 
 
@@ -30,6 +30,15 @@
 </body>
 
 <script>
+
+document.getElementById("myUL").onclick = function() {WhenClicked()};
+
+function WhenClicked() {
+    var t = document.createTextNode("This is a paragraph.");
+    document.getElementById("myUL").appendChild(t);
+}
+
+
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -52,11 +61,12 @@ for (i = 0; i < close.length; i++) {
 }
 
 // Create a new list item when clicking on the "Add" button
-function newElement() {
+function newPhrase() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
+
   if (inputValue === '') {
     alert("Please write the phrase in the box");
   } else {
