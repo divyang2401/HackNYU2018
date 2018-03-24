@@ -1,7 +1,7 @@
 # tone-analyzer.py
 #
 # Call syntax:
-#   python3 api/tone-analyzer.py hello.wav
+#   python tone-analyzer.py hello.wav
 #
 # For the sound file hello.wav that comes with OpenVokaturi, the result should be:
 #	Neutral: 0.760
@@ -17,7 +17,9 @@ sys.path.append("./")
 import Vokaturi
 
 print ("Loading library...")
-Vokaturi.load("./OpenVokaturi-3-0-linux64.so")
+# PLEASE UPDATE THE PATH BASED ON YOUR OPERATING SYSTEM. THIS WORKS FOR MAC OSX. IF YOU HAVE WINDOWS OR LINUX
+# YOU NEED TO CHANGE IT TO THE RIGHT FILE. CHECK README FOR INSTRUCTIONS
+Vokaturi.load("./OpenVokaturi-3-0-mac.dylib")
 print ("Analyzed by: %s" % Vokaturi.versionAndLicense())
 
 print ("Reading sound file...")
