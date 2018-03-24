@@ -14,9 +14,13 @@ Tested working with Python2 and pip 9.0.1
 
 ### How to install Vokaturi
 
-* Install the SDK from https://developers.vokaturi.com/downloads/sdk
-* Move the appropriate Vokaturi library into the `/api` folder. If you have Linux u install the Linux library, if Mac you install the .dylib, etc.
-* Update the `tone-analyzer.py` file to import the Vokaturi library
+1. Install the SDK from https://developers.vokaturi.com/downloads/sdk
+2. Move the appropriate Vokaturi library found in the `lib` into the `/api` folder. If you have Linux u install the Linux library, if Mac you install the .dylib, etc.
+3. Update the `tone-analyzer.py` file to import the Vokaturi library via relative path. For example:
+
+```Python
+Vokaturi.load("./OpenVokaturi-3-0-linux64.so")
+```
 
 ### How to run the Tone Analysis
 You need Vokaturi to get this to work.
