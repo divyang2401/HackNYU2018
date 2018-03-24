@@ -19,8 +19,8 @@ import Vokaturi
 os = sys.argv[2]
 
 print ("Loading library...")
-# PLEASE UPDATE THE PATH BASED ON YOUR OPERATING SYSTEM. THIS WORKS FOR MAC OSX. IF YOU HAVE WINDOWS OR LINUX
-# YOU NEED TO CHANGE IT TO THE RIGHT FILE. CHECK README FOR INSTRUCTIONS
+# NOTE: This is working for OSX, Linux, Win64. If this doesn't work on your machine, you might have to install some other
+# Vokaturi library like the win32.dll file and change the relative path accordingly
 if os == 'windows':
 	Vokaturi.load("./OpenVokaturi-3-0-win64.dll")
 elif os == 'linux':
