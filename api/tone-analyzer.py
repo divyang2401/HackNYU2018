@@ -16,12 +16,17 @@ import scipy.io.wavfile
 sys.path.append("./")
 import Vokaturi
 
+os = sys.argv[2]
+
 print ("Loading library...")
 # PLEASE UPDATE THE PATH BASED ON YOUR OPERATING SYSTEM. THIS WORKS FOR MAC OSX. IF YOU HAVE WINDOWS OR LINUX
 # YOU NEED TO CHANGE IT TO THE RIGHT FILE. CHECK README FOR INSTRUCTIONS
-Vokaturi.load("./OpenVokaturi-3-0-win64.dll")
-# Vokaturi.load("./OpenVokaturi-3-0-linux64.so")
-#Vokaturi.load("./OpenVokaturi-3-0-mac64.dylib")
+if os == 'windows':
+	Vokaturi.load("./OpenVokaturi-3-0-win64.dll")
+elif os == 'linux':
+	Vokaturi.load("./OpenVokaturi-3-0-linux64.so")
+elif os == 'mac' or os == 'osx' or os == 'macos':
+	Vokaturi.load("./OpenVokaturi-3-0-mac64.dylib")
 print ("Analyzed by: %s" % Vokaturi.versionAndLicense())
 
 print ("Reading sound file...")
