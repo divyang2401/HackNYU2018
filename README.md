@@ -22,6 +22,24 @@ $ cd api
 $ python tone-analyzer.py hello.wav mac
 ```
 
+#### Mac
+
+```sh
+$ python tone-analyzer.py hello.wav mac
+```
+
+#### Linux
+
+```sh
+$ python tone-analyzer.py hello.wav linux
+```
+
+#### Windows
+
+```sh
+$ python tone-analyzer.py hello.wav windows
+```
+
 ## How Do I Use A Different Audio File?
 
 * Just record some audio and save it as a `.wav` file in the `api` folder
