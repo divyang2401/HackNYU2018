@@ -1,6 +1,6 @@
-#HackNYU2018
-##Accessibility & Assistive Technology
-*Journal for Caretaker of Austistic Patients*
+## HackNYU2018
+### Accessibility & Assistive Technology
+# Journal for Caretaker of Austistic Patients
 
 ## How Do I Perform Tone Analysis?
 Tested working with Python2 and pip 9.0.1
