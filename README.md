@@ -1,5 +1,5 @@
 # EchoJournal: Journal for Caretakers of Austistic Patients
-## HackNYU2018
+## #HackNYU2018
 ### Accessibility & Assistive Technology
 
 
