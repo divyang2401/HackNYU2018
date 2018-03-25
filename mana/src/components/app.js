@@ -12,7 +12,7 @@ class App extends Component {
       entries: [
         {
           title: 'First Entry',
-          date: '2018-01-02',
+          date: '2018-03-23',
           phrase: 'lorem',
           log: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente maxime nobis totam a in laudantium tenetur deserunt inventore sit molestiae officia doloremque accusantium, voluptate praesentium placeat quo rerum ab dolore`,
           emotion: {

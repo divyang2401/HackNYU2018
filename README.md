@@ -2,6 +2,20 @@
 ### Accessibility & Assistive Technology
 # Journal for Caretaker of Austistic Patients
 
+## How to run app?
+Tested react app working with 
+
+```sh
+$ git clone https://github.com/myy233/HackNYU2018.git
+$ cd mana
+$ npm install
+$ npm start
+```
+### Requirements
+
+* Atom, Sublime, VS Code, or any modern text editor
+* Node.js and npm
+
 ## How Do I Perform Tone Analysis?
 Tested working with Python2 and pip 9.0.1
 
