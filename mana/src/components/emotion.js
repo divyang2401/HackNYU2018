@@ -4,6 +4,9 @@ import { PolarArea } from 'react-chartjs';
 export default class Emotion extends Component {
 
   render() {
+    if(!this.props.emotion){
+      return null;
+    }
     const keys = Object.keys(this.props.emotion);
     const values = Object.values(this.props.emotion).map(v=>Math.round(v*100));
     const data = [
@@ -95,12 +98,17 @@ export default class Emotion extends Component {
       // {% endraw %}
     };
     
+    const colors = ["red","grey","yellow","purple","green"]
+
     return (
-      <div>
+      <div className="chart z-depth-2">
         <PolarArea data={data} options={options} width="300" height="300"></PolarArea>
-        <div>
-          {keys.map(key => (
-            <p><span></span>{key}</p>
+        <div className="chart-legend">
+          {keys.map((key, i) => (
+            <div className="chart-legend-key">
+              <div className={`chart-legend-key-circle ${colors[i]}`}></div>
+              <h3>{key}</h3>
+            </div>
           ))}
         </div>
       </div>

@@ -12,7 +12,7 @@ class App extends Component {
       entries: [
         {
           title: 'First Entry',
-          date: '2018-03-23',
+          date: '2018-01-02',
           phrase: 'lorem',
           log: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente maxime nobis totam a in laudantium tenetur deserunt inventore sit molestiae officia doloremque accusantium, voluptate praesentium placeat quo rerum ab dolore`,
           emotion: {
@@ -27,17 +27,16 @@ class App extends Component {
     }
   }
 
-  createEntry = (newEntry) => {
+  createEntry = (entry) => {
     const Neutral = parseFloat((1 * Math.random()).toFixed(3));
     const Happy = parseFloat(((1 - Neutral) * Math.random()).toFixed(3));
     const Sad = parseFloat(((1 - Happy - Neutral) *  Math.random()).toFixed(3));
     const Angry = parseFloat(((1 - Sad - Happy - Neutral) *  Math.random()).toFixed(3));
     const Fear = parseFloat((1 - Angry - Sad - Happy - Neutral).toFixed(3));
     
-    newEntry.emotions = { Neutral, Happy, Sad, Angry, Fear}
-
+    entry.emotion = { Neutral, Happy, Sad, Angry, Fear}
     this.setState((prevState) => ({
-      entries: [...prevState.entries, newEntry ]
+      entries: [...prevState.entries, entry ]
     }));
 
 
@@ -46,7 +45,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter> 
-        <div>
+        <div className="App">
           <Switch>
             <Route path="/new" render={() =>(
               <NewEntry createEntry={this.createEntry} />  
